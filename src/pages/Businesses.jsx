@@ -16,7 +16,7 @@ const MOCK_BUSINESSES = [
   {
     id: '2', name: 'Bolera Space', tag: 'Diversión, strikes y buen ambiente', category: 'Ocio',
     color: '#7b2d8b',
-    image_url: 'https://images.unsplash.com/photo-1612279867574-68f8e45dc4e3?w=600&q=80',
+    image_url: '/images/bolera.jpg',
     emoji: '🎳'
   },
   {
