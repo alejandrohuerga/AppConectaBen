@@ -19,8 +19,8 @@ const INTERESTS_MAP = {
 
 // --- DATOS MANUALES ---
 const MANUAL_USER = {
-  full_name: 'Usuario Administrador',
-  email: 'admin@ejemplo.com',
+  full_name: 'Yolanda Redondo',
+  email: 'redondoestebanezgmail.com',
   role: 'admin',
   avatar_url: null, // Puedes poner una URL de imagen aquí
   bio: 'Gestor de contenido y entusiasta de la tecnología.',
