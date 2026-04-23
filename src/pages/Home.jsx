@@ -14,7 +14,7 @@ const NEWS_SAMPLE = [
 
 const EVENTS_SAMPLE = [
   { id: '1', title: 'Concierto en la Plaza Mayor', date: '14 de junio · 22:00', location: 'Plaza Mayor', image_url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80', color: 'bg-purple-500', category: 'Conciertos' },
-  { id: '2', title: 'Visita guiada al Castillo de Benavente', date: '31 de mayo · 12:00', location: 'Torre del Caracol', image_url: 'https://images.unsplash.com/photo-1548526928-eb8f3ad04bd6?w=400&q=80', color: 'bg-primary', category: 'Cultura' },
+  { id: '2', title: 'Visita guiada al Castillo de Benavente', date: '31 de mayo · 12:00', location: 'Torre del Caracol', image_url: '/images/castillobenavente.jpg', color: 'bg-primary', category: 'Cultura' },
   { id: '3', title: 'Mercado de Productores', date: 'Todos los sábados', location: 'Plaza de Abastos', image_url: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&q=80', color: 'bg-orange-500', category: 'Gastronomía' },
 ];
 
