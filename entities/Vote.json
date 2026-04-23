@@ -1,0 +1,20 @@
+{
+  "name": "Vote",
+  "type": "object",
+  "properties": {
+    "poll_id": {
+      "type": "string"
+    },
+    "option_id": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "poll_id",
+    "option_id",
+    "user_email"
+  ]
+}

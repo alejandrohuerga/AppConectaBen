@@ -1,0 +1,49 @@
+{
+  "name": "Course",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Marketing Digital",
+        "Idiomas",
+        "Emprendimiento",
+        "Tecnolog\u00eda",
+        "Arte",
+        "Otros"
+      ]
+    },
+    "duration_hours": {
+      "type": "number"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "Principiante",
+        "Intermedio",
+        "Avanzado"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "instructor": {
+      "type": "string"
+    },
+    "enrolled_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "level"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Favorite",
+  "type": "object",
+  "properties": {
+    "item_id": {
+      "type": "string"
+    },
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "event",
+        "news",
+        "course",
+        "business"
+      ]
+    },
+    "item_title": {
+      "type": "string"
+    },
+    "item_image": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "item_id",
+    "item_type",
+    "user_email"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Business",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Ocio",
+        "Moda",
+        "Gastronom\u00eda",
+        "Deporte",
+        "Tecnolog\u00eda",
+        "Servicios",
+        "Otros"
+      ]
+    },
+    "tag": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "is_coming_soon": {
+      "type": "boolean",
+      "default": false
+    },
+    "address": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}
