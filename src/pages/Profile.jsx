@@ -1,6 +1,6 @@
+
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { base44 } from '@/api/base44Client';
 import { Edit2, LogOut, Heart, BookmarkCheck, Settings, ChevronRight, Camera, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,46 +17,41 @@ const INTERESTS_MAP = {
   tiendas: { label: 'Nuevas Tiendas', emoji: '🛍️' },
 };
 
+// --- DATOS MANUALES ---
+const MANUAL_USER = {
+  full_name: 'Usuario Administrador',
+  email: 'admin@ejemplo.com',
+  role: 'admin',
+  avatar_url: null, // Puedes poner una URL de imagen aquí
+  bio: 'Gestor de contenido y entusiasta de la tecnología.',
+  interests: ['cine', 'cursos', 'emprendimiento'],
+  preferences_done: true
+};
+
 export default function Profile() {
-  const [user, setUser] = useState(null);
+  // Mantenemos estados locales para que la interfaz siga siendo interactiva (editar bio, etc)
+  const [user] = useState(MANUAL_USER);
   const [editing, setEditing] = useState(false);
-  const [bio, setBio] = useState('');
-  const [favorites, setFavorites] = useState([]);
+  const [bio, setBio] = useState(MANUAL_USER.bio);
+  const [favorites, setFavorites] = useState([]); // Estos pueden quedar vacíos o manuales también
   const navigate = useNavigate();
 
-  useEffect(() => {
-    base44.auth.me().then(u => {
-      setUser(u);
-      setBio(u.bio || '');
-    }).catch(() => {});
-    base44.entities.Favorite.list().then(setFavorites).catch(() => {});
-  }, []);
-
-  const handleSave = async () => {
-    await base44.auth.updateMe({ bio });
-    setUser(prev => ({ ...prev, bio }));
+  const handleSave = () => {
+    // Simulamos guardado local
     setEditing(false);
-    toast.success('Perfil actualizado');
+    toast.success('Perfil actualizado (Simulado)');
   };
 
   const handleLogout = () => {
-    base44.auth.logout('/');
+    console.log("Cerrando sesión...");
+    navigate('/');
   };
 
-  if (!user) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
-  }
-
   const isAdmin = user.role === 'admin';
-  const initials = user.full_name?.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'CB';
+  const initials = user.full_name?.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'AD';
 
   return (
     <div className="min-h-screen bg-muted/30">
-      {/* Header bg */}
       <div className="bg-primary h-32 relative" />
 
       <div className="px-4 -mt-14 relative z-10 pb-8">
@@ -97,51 +92,30 @@ export default function Profile() {
               <Button size="sm" onClick={handleSave} className="w-full rounded-xl">Guardar</Button>
             </div>
           ) : (
-            <p className="text-muted-foreground text-sm">{user.bio || 'Sin descripción. Toca el lápiz para añadir una.'}</p>
+            <p className="text-muted-foreground text-sm">{bio || 'Sin descripción.'}</p>
           )}
         </div>
 
-        {/* Interests */}
-        {user.interests && user.interests.length > 0 && (
-          <div className="bg-card rounded-2xl border border-border p-4 mb-4">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="font-semibold text-foreground text-sm">Mis intereses</h3>
-              <button onClick={() => navigate('/preferencias')} className="text-primary text-xs">Editar</button>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {user.interests.map(id => {
-                const item = INTERESTS_MAP[id];
-                if (!item) return null;
-                return (
-                  <span key={id} className="flex items-center gap-1 bg-accent text-accent-foreground text-xs px-3 py-1.5 rounded-full font-medium">
-                    {item.emoji} {item.label}
-                  </span>
-                );
-              })}
-            </div>
+        {/* Interests (Usando tus datos manuales) */}
+        <div className="bg-card rounded-2xl border border-border p-4 mb-4">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="font-semibold text-foreground text-sm">Mis intereses</h3>
+            <button onClick={() => navigate('/preferencias')} className="text-primary text-xs">Editar</button>
           </div>
-        )}
-
-        {/* Favorites */}
-        {favorites.length > 0 && (
-          <div className="bg-card rounded-2xl border border-border p-4 mb-4">
-            <h3 className="font-semibold text-foreground text-sm mb-3">Mis guardados ({favorites.length})</h3>
-            <div className="space-y-2">
-              {favorites.slice(0, 5).map(fav => (
-                <div key={fav.id} className="flex items-center gap-3">
-                  {fav.item_image && <img src={fav.item_image} className="w-10 h-10 rounded-lg object-cover" alt="" />}
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground truncate">{fav.item_title}</p>
-                    <p className="text-xs text-muted-foreground capitalize">{fav.item_type}</p>
-                  </div>
-                  <BookmarkCheck size={14} className="text-primary flex-shrink-0" />
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-2">
+            {user.interests.map(id => {
+              const item = INTERESTS_MAP[id];
+              if (!item) return null;
+              return (
+                <span key={id} className="flex items-center gap-1 bg-accent text-accent-foreground text-xs px-3 py-1.5 rounded-full font-medium">
+                  {item.emoji} {item.label}
+                </span>
+              );
+            })}
           </div>
-        )}
+        </div>
 
-        {/* Admin Panel */}
+        {/* Admin Panel (Visible porque role es admin) */}
         {isAdmin && (
           <button
             onClick={() => navigate('/admin')}
