@@ -28,7 +28,7 @@ const MOCK_BUSINESSES = [
   {
     id: '4', name: 'Starbucks Benavente', tag: 'Tu café favorito, ahora en Benavente', category: 'Ocio',
     color: '#00704A',
-    image_url: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80',
+    image_url: '/images/starbucks.jpg',
     emoji: '☕'
   },
   {
