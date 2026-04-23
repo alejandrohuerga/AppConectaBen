@@ -22,7 +22,7 @@ const MOCK_BUSINESSES = [
   {
     id: '3', name: 'CityJump Trampoline Park', tag: 'Salta sin límites, vive la adrenalina', category: 'Ocio',
     color: '#2dc653',
-    image_url: 'https://images.unsplash.com/photo-1597075653948-fb4b3e0cbfca?w=600&q=80',
+    image_url: '/images/trampolines.jpg',
     emoji: '🤸'
   },
   {
