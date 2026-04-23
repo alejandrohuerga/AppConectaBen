@@ -8,7 +8,7 @@ import { es } from 'date-fns/locale';
 
 const NEWS_SAMPLE = [
   { id: '1', title: 'Benavente celebra las Fiestas del Toro 2025', category: 'Local', image_url: '/images/toro.jpg', time: 'Hace 2 horas', likes: 24 },
-  { id: '2', title: 'Nuevo centro joven "Espacio Benavente" ya abierto', category: 'Noticia', image_url: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80', time: 'Hace 5 horas', likes: 38 },
+  { id: '2', title: 'Nuevo punto joven "Espacio Benavente" ya abierto', category: 'Noticia', image_url: '/images/punto.jpg', time: 'Hace 5 horas', likes: 38 },
   { id: '3', title: 'Torneo de Pádel en Benavente', category: 'Deporte', image_url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=400&q=80', time: 'Hace 1 día', likes: 15 },
 ];
 
