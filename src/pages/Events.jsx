@@ -13,7 +13,7 @@ const CAT_COLORS = { Conciertos: 'text-orange-600', Deportes: 'text-green-600', 
 const MOCK_EVENTS = [
   { id: '1', title: 'Concierto de Sidecars', category: 'Conciertos', date: '2025-05-24', time: '21:30 h', location: 'Teatro Reina Sofía', image_url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80' },
   { id: '2', title: 'Carrera Popular Ciudad de Benavente', category: 'Deportes', date: '2025-05-25', time: '10:00 h', location: 'Paseo de la Mota', image_url: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80' },
-  { id: '3', title: 'Visita guiada al Castillo de Benavente', category: 'Cultura', date: '2025-05-31', time: '12:00 h', location: 'Torre del Caracol, Castillo de Benavente', image_url: 'https://images.unsplash.com/photo-1548526928-eb8f3ad04bd6?w=600&q=80' },
+  { id: '3', title: 'Visita guiada al Castillo de Benavente', category: 'Cultura', date: '2025-05-31', time: '12:00 h', location: 'Torre del Caracol, Castillo de Benavente', image_url: '../webroot/images/castillobenavente.jpg' },
   { id: '4', title: 'Taller infantil: Pequeños Artistas', category: 'Familia', date: '2025-06-01', time: '17:00 h', location: 'Centro Cívico', image_url: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80' },
   { id: '5', title: 'Mercado de productores locales', category: 'Gastronomía', date: '2025-06-07', time: '09:00 h', location: 'Plaza Mayor', image_url: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80' },
 ];
