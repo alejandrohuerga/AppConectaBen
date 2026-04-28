@@ -15,7 +15,7 @@ const NEWS_SAMPLE = [
 const EVENTS_SAMPLE = [
   { id: '1', title: 'Concierto Sidecars', date: '24 de Mayo · 22:00', location: 'Plaza Mayor', image_url: '/images/sidecars.png', color: 'bg-purple-500', category: 'Conciertos' },
   { id: '2', title: 'Visita guiada al Castillo de Benavente', date: '31 de mayo · 12:00', location: 'Torre del Caracol', image_url: '/images/castillobenavente.jpg', color: 'bg-primary', category: 'Cultura' },
-  { id: '3', title: 'Mercado de Productores', date: 'Todos los sábados', location: 'Plaza de Abastos', image_url: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&q=80', color: 'bg-orange-500', category: 'Gastronomía' },
+  { id: '3', title: 'Mercado de Productores', date: 'Todos los sábados', location: 'Plaza Mayor', image_url: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&q=80', color: 'bg-orange-500', category: 'Gastronomía' },
 ];
 
 const CATEGORY_COLORS = { Local: 'bg-blue-500', Noticia: 'bg-green-500', Deporte: 'bg-orange-500', Cultura: 'bg-purple-500' };
