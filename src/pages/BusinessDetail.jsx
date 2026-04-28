@@ -182,7 +182,7 @@ const BUSINESS_INFO = {
     ],
   },
   '4': {
-    heroImage: 'https://images.unsplash.com/photo-1569701813229-33284b643e3c?w=800&q=80',
+    heroImage: '/images/starbucks.jpg',
     badge: '☕ Café',
     rating: '4.5',
     description: 'Starbucks llega a Benavente para ofrecer la experiencia de café premium más reconocida del mundo. Desde sus icónicos Frappuccinos hasta los lattes más especiados, cada visita es una pausa especial en tu día. Un espacio cálido, acogedor y con WiFi gratuito, perfecto para trabajar, estudiar o simplemente disfrutar con amigos.',
