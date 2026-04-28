@@ -160,7 +160,7 @@ const BUSINESS_INFO = {
     ],
   },
   '3': {
-    heroImage: 'https://images.unsplash.com/photo-1597075653948-fb4b3e0cbfca?w=800&q=80',
+    heroImage: '/images/trampolines.jpg',
     badge: '🤸 Acrobacias',
     rating: '4.8',
     description: 'CityJump Trampoline Park es el parque de trampolines más grande de la provincia. Un espacio de más de 2.000 m² repleto de trampolines, zonas de espuma, paredes de escalada y rampas de freestyle. Ideal para niños, jóvenes y adultos que quieran liberar energía, practicar deporte de una forma diferente y vivir emociones únicas.',
@@ -176,9 +176,9 @@ const BUSINESS_INFO = {
       { emoji: '👶', title: 'Zona toddler', desc: 'Área exclusiva y segura para los más pequeños (0-5 años).' },
     ],
     extraImages: [
-      'https://images.unsplash.com/photo-1597075653948-fb4b3e0cbfca?w=400&q=80',
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80',
-      'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400&q=80',
+      '/images/cityjump2.jpg',
+      '/images/cityjump1.jpg',
+      '/images/cityjump3.jpg',
     ],
   },
   '4': {
