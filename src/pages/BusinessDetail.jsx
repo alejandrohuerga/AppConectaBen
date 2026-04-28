@@ -154,9 +154,9 @@ const BUSINESS_INFO = {
       { emoji: '🎂', title: 'Celebraciones', desc: 'Paquetes especiales para cumpleaños y eventos de empresa.' },
     ],
     extraImages: [
-      'https://images.unsplash.com/photo-1567604460-4f9a62e24dcf?w=400&q=80',
-      'https://images.unsplash.com/photo-1531496730074-83b227ba3098?w=400&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80',
+      '/images/bolera.jpg',
+      '/images/bolera1.webp',
+      '/images/bolera2.jpg',
     ],
   },
   '3': {
