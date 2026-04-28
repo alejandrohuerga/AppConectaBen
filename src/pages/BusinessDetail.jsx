@@ -204,7 +204,7 @@ const BUSINESS_INFO = {
     ],
   },
   '5': {
-    heroImage: 'https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&q=80',
+    heroImage: '/images/tablao1.png',
     badge: '💃 Flamenco',
     rating: '4.9',
     description: 'El Tablao de Flamenco de Benavente es un espacio cultural único en la comarca dedicado al arte flamenco en su máxima expresión. Actuaciones en vivo con bailaores y cantaores profesionales, acompañados de guitarristas de primera categoría. Una experiencia visceral, emotiva y auténtica que conecta con las raíces más profundas de la cultura española.',
@@ -220,9 +220,9 @@ const BUSINESS_INFO = {
       { emoji: '🎓', title: 'Talleres de flamenco', desc: 'Clases para principiantes impartidas por bailaores profesionales.' },
     ],
     extraImages: [
-      'https://images.unsplash.com/photo-1547153760-18fc86324498?w=400&q=80',
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80',
-      'https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=400&q=80',
+      '/images/tablao1.png',
+      '/images/tablao2.jpg',
+      '/images/tablao3.jpg',
     ],
   },
 };

@@ -111,7 +111,7 @@ function generateDescription(item) {
   }
 
   if (t.includes('sidecars') || item.category === 'Conciertos') {
-    return `🎸 No te pierdas este increíble concierto en Benavente. Una noche mágica de música en vivo que promete emociones a flor de piel. El escenario del Teatro Reina Sofía acogerá una actuación espectacular con todo el equipo de producción en su máxima expresión. Entradas disponibles en taquilla y online. Aforo limitado, ¡hazte ya con la tuya!`;
+    return `🎸 El evento será totalmente gratuito, lo que facilita el acceso a todos los públicos y fomenta la participación, especialmente entre los más jóvenes. Será una oportunidad perfecta para disfrutar de música en vivo en pleno centro de Benavente, dinamizando la vida social y ofreciendo una alternativa de ocio atractiva. ¡No faltes!`;
   }
 
   if (item.category === 'Familia') {
